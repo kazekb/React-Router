@@ -4,7 +4,11 @@ import {
     Route,
     Link
 } from 'react-router-dom';
-import logo from './logo.svg';
+
+import Home from './pages/Home.js';
+import About from './pages/About.js';
+import Projects from './pages/Projects.js';
+import Contact from './pages/Contact.js';
 import './App.css';
 
 
@@ -13,54 +17,62 @@ export default function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
+        <header>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/" style={{
+                  textDecoration: 'none',
+                color:"#cccccc",
+               fontWeight:'bold',
+             textTransform:'uppercase'}}>Home</Link>
+              </li>
+              <li>
+                <Link to="/about"style={{
+                  textDecoration: 'none',
+                color:"#cccccc",
+              fontWeight:'bold',
+             textTransform:'uppercase' }}>About</Link>
+              </li>
+              <li>
+                <Link to="/projects"style={{
+                  textDecoration: 'none',
+                color:"#cccccc",
+              fontWeight:'bold',
+             textTransform:'uppercase' }}>Projects</Link>
+              </li>
+              <li>
+                <Link to="/contact"style={{
+                  textDecoration: 'none',
+                color:"#cccccc",
+              fontWeight:'bold',
+             textTransform:'uppercase' }}>Contact</Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/about">
-
-            <div className = "App">
-              <header className = "App-header" >
-                <img src = { logo } className = "App-logo" alt = "logo"/>
-                <p>*** ABOUT *** Edit < code > src / App.js < /code> and save to reload.</p>
-                <a className = "App-link" href = "https://reactjs.org"target = "_blank" rel = "noopener noreferrer" > Learn React < /a>
-              </header>
-            </div>
-          </Route>
-          <Route path="/users">
-
-          <div className = "App">
-            <header className = "App-header" >
-              <img src = { logo } className = "App-logo" alt = "logo"/>
-              <p>*** USERS Edit < code > src / App.js < /code> and save to reload.</p>
-              <a className = "App-link" href = "https://reactjs.org"target = "_blank" rel = "noopener noreferrer" > Learn React < /a>
-            </header>
-          </div>
-          </Route>
-          <Route path="/">
-      
-            <div className = "App">
-              <header className = "App-header" >
-                <img src = { logo } className = "App-logo" alt = "logo"/>
-                <p>*** HOME Edit < code > src / App.js < /code> and save to reload.</p>
-                <a className = "App-link" href = "https://reactjs.org"target = "_blank" rel = "noopener noreferrer" > Learn React < /a>
-              </header>
-            </div>
-          </Route>
-        </Switch>
+        <main>
+          <Switch>
+            <Route path="/about">
+              <About/>
+            </Route>
+            <Route path="/projects">
+              <Projects/>
+            </Route>
+            <Route path="/">
+              <Home/>
+            </Route>
+            <Route path="/contact">
+              <Contact/>
+            </Route>
+          </Switch>
+        </main>
+        <footer>
+          &copy; 2021
+        </footer>
       </div>
     </Router>
   );

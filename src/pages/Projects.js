@@ -1,13 +1,13 @@
 import logo from '../images/logo.svg';
 import '../App.css';
 
-export default function Home() {
+export default function Projects() {
   return (
     <div className = "App">
       <header className = "App-header">
         <img src = { logo } className = "App-logo" alt = "logo"/>
-        <p>Welcome to Kaze's ... </p>
-        
+        <p>Kaze's projects </p>
+
       </header>
     </div>
   );
