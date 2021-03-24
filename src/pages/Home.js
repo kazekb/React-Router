@@ -51,7 +51,7 @@ export default function App() {
           </div>
           </Route>
           <Route path="/">
-      
+
             <div className = "App">
               <header className = "App-header" >
                 <img src = { logo } className = "App-logo" alt = "logo"/>
