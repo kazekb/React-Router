@@ -6,8 +6,8 @@ export default function Home() {
     <div className = "App">
       <header className = "App-header">
         <img src = { logo } className = "App-logo" alt = "logo"/>
-        <p>Welcome to Kaze's ... </p>
-        
+        <p>Welcome to Kaze's Website </p>
+
       </header>
     </div>
   );

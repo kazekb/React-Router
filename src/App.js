@@ -62,12 +62,13 @@ export default function App() {
             <Route path="/projects">
               <Projects/>
             </Route>
-            <Route path="/">
-              <Home/>
-            </Route>
             <Route path="/contact">
               <Contact/>
             </Route>
+            <Route path="/">
+              <Home/>
+            </Route>
+
           </Switch>
         </main>
         <footer>

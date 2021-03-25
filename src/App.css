@@ -17,11 +17,12 @@ ul {
   list-style: none;
 }
 
+
 body {
   background-color: #1a1a1a;
 }
 .App-header {
-  background-color: #282c34;
+  background-color: #414141;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
